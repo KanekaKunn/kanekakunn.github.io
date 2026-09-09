@@ -369,7 +369,6 @@ nav.main-nav a.active {
 .project-body p { font-size: 0.93rem; margin-bottom: 14px; }
 
 .project-status {
-  margin-top: auto;
   font-size: 0.82rem;
   color: var(--text-muted);
   display: flex;
@@ -603,6 +602,76 @@ nav.main-nav a.active {
   font-size: 1.05rem;
   color: var(--text-muted);
   max-width: 56ch;
+}
+
+/* ---------- Language switch ---------- */
+
+.nav-area {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.lang-switch {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 3px;
+  gap: 2px;
+}
+
+.lang-btn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-family: 'Sora', sans-serif;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
+  padding: 6px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background .15s ease, color .15s ease;
+}
+
+.lang-btn:hover:not(.active) { color: var(--text); }
+
+.lang-btn.active {
+  background: var(--coral);
+  color: #1A1428;
+}
+
+/* ---------- Project card CTA ---------- */
+
+.project-footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: 8px 14px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.project-link svg { width: 14px; height: 14px; }
+
+.project-link:hover {
+  border-color: var(--coral);
+  color: var(--coral);
+  text-decoration: none;
 }
 
 /* ---------- Icon color utilities ---------- */

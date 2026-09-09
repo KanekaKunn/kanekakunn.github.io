@@ -15,23 +15,29 @@
       <span class="badge">MA</span>
       Marcos Alcantara
     </a>
-    <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-    </button>
-    <nav class="main-nav">
-      <a href="index.html">Home</a>
-      <a href="projetos.html" class="active">Projetos</a>
-      <a href="sobre.html">Sobre</a>
-      <a href="contato.html">Contato</a>
-    </nav>
+    <div class="nav-area">
+      <nav class="main-nav">
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="projetos.html" class="active" data-i18n="nav.projects">Projetos</a>
+        <a href="sobre.html" data-i18n="nav.about">Sobre</a>
+        <a href="contato.html" data-i18n="nav.contact">Contato</a>
+      </nav>
+      <div class="lang-switch" role="group" aria-label="Idioma / Language">
+        <button type="button" class="lang-btn" data-lang="pt">PT</button>
+        <button type="button" class="lang-btn" data-lang="en">EN</button>
+      </div>
+      <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
   </div>
 </header>
 
 <main>
   <section class="page-head">
     <div class="wrap">
-      <h1>Projetos</h1>
-      <p class="lead">Uma seleção do que venho construindo — de jogos completos em engine até estudos de personagem em 3D. Cada projeto aqui foi uma forma de aprender uma parte diferente do processo.</p>
+      <h1 data-i18n="projects.h1">Projetos</h1>
+      <p class="lead" data-i18n="projects.lead">Uma seleção do que venho construindo — de jogos completos em engine até estudos de personagem em 3D. Cada projeto aqui foi uma forma de aprender uma parte diferente do processo.</p>
     </div>
   </section>
 
@@ -49,16 +55,23 @@
               <circle cx="15" cy="10.5" r="1"/>
               <circle cx="17.5" cy="12.5" r="1"/>
             </svg>
-            <span class="ph-label">Imagem em breve</span>
+            <span class="ph-label" data-i18n="common.imgSoon">Imagem em breve</span>
           </div>
           <div class="project-body">
             <div class="project-tags">
-              <span class="tag tag-coral">Unreal Engine 5</span>
-              <span class="tag">Blueprint</span>
+              <span class="tag tag-coral" data-i18n="project1.tag1">Unreal Engine 5</span>
+              <span class="tag" data-i18n="project1.tag2">Blueprint</span>
             </div>
-            <h3>FPS estilo COD Zombies</h3>
-            <p>Jogo de tiro em primeira pessoa inspirado no modo Zumbi de Call of Duty, construído em Unreal Engine 5 usando Blueprints. Projeto de aprendizado focado em combate, ondas de inimigos e sistemas de jogo em UE5.</p>
-            <div class="project-status"><span class="dot"></span> Em desenvolvimento — projeto de aprendizado</div>
+            <h3 data-i18n="project1.title">FPS estilo COD Zombies</h3>
+            <p data-i18n="project1.desc">Jogo de tiro em primeira pessoa inspirado no modo Zumbi de Call of Duty, construído em Unreal Engine 5 usando Blueprints. Projeto de aprendizado focado em combate, ondas de inimigos e sistemas de jogo em UE5.</p>
+            <div class="project-footer">
+              <div class="project-status"><span class="dot"></span> <span data-i18n="project1.status">Em desenvolvimento — projeto de aprendizado</span></div>
+              <!-- TODO: substituir pelo link real do itch.io -->
+              <a href="#" class="project-link" target="_blank" rel="noopener">
+                <span data-i18n="project1.cta">Jogar no itch.io</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
           </div>
         </article>
 
@@ -73,16 +86,23 @@
               <line x1="10" y1="6.5" x2="14" y2="6.5"/>
               <line x1="6.5" y1="10" x2="6.5" y2="14"/>
             </svg>
-            <span class="ph-label">Imagem em breve</span>
+            <span class="ph-label" data-i18n="common.imgSoon">Imagem em breve</span>
           </div>
           <div class="project-body">
             <div class="project-tags">
-              <span class="tag tag-teal">Unity (URP)</span>
-              <span class="tag">Roguelike</span>
+              <span class="tag tag-teal" data-i18n="project2.tag1">Unity (URP)</span>
+              <span class="tag" data-i18n="project2.tag2">Roguelike</span>
             </div>
-            <h3>Dungeon crawler FPS roguelike</h3>
-            <p>Dungeon crawler em primeira pessoa com geração de runs no estilo roguelike, desenvolvido em Unity com URP. Foco em level design modular e no ritmo de exploração e combate entre andares.</p>
-            <div class="project-status"><span class="dot"></span> Em desenvolvimento</div>
+            <h3 data-i18n="project2.title">Catapimbas — dungeon crawler FPS roguelike</h3>
+            <p data-i18n="project2.desc">Dungeon crawler em primeira pessoa com geração de runs no estilo roguelike, desenvolvido em Unity com URP. Foco em level design modular e no ritmo de exploração e combate entre andares.</p>
+            <div class="project-footer">
+              <div class="project-status"><span class="dot"></span> <span data-i18n="project2.status">Em desenvolvimento</span></div>
+              <!-- TODO: substituir pelo link real do itch.io -->
+              <a href="#" class="project-link" target="_blank" rel="noopener">
+                <span data-i18n="project2.cta">Jogar no itch.io</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
           </div>
         </article>
 
@@ -93,16 +113,23 @@
               <circle cx="12" cy="7" r="3.2"/>
               <path d="M5.5 21c0-4 3-6.5 6.5-6.5s6.5 2.5 6.5 6.5"/>
             </svg>
-            <span class="ph-label">Imagem em breve</span>
+            <span class="ph-label" data-i18n="common.imgSoon">Imagem em breve</span>
           </div>
           <div class="project-body">
             <div class="project-tags">
-              <span class="tag tag-gold">Blender</span>
-              <span class="tag">Substance Painter</span>
+              <span class="tag tag-gold" data-i18n="project3.tag1">Blender</span>
+              <span class="tag" data-i18n="project3.tag2">Substance Painter</span>
             </div>
-            <h3>Cavaleiro medieval — character art</h3>
-            <p>Personagem 3D criado para um desafio comunitário de temática apocalíptica. Modelagem poly-a-poly em Blender e texturização em Substance 3D Painter, com estudo de iluminação para o render final.</p>
-            <div class="project-status"><span class="dot"></span> Concluído</div>
+            <h3 data-i18n="project3.title">Cavaleiro medieval — character art</h3>
+            <p data-i18n="project3.desc">Personagem 3D criado para um desafio comunitário de temática apocalíptica. Modelagem poly-a-poly em Blender e texturização em Substance 3D Painter, com estudo de iluminação para o render final.</p>
+            <div class="project-footer">
+              <div class="project-status"><span class="dot"></span> <span data-i18n="project3.status">Concluído</span></div>
+              <!-- TODO: substituir pela URL real da página do projeto no ArtStation -->
+              <a href="#" class="project-link" target="_blank" rel="noopener">
+                <span data-i18n="project3.cta">Ver no ArtStation</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
           </div>
         </article>
 
@@ -113,15 +140,16 @@
 
 <footer class="site-footer">
   <div class="wrap">
-    <p>&copy; 2026 Marcos Alcantara.</p>
+    <p data-i18n="footer.rights">&copy; 2026 Marcos Alcantara.</p>
     <div class="footer-socials">
-      <a href="https://kanekakunn.artstation.com" target="_blank" rel="noopener">ArtStation</a>
-      <a href="https://www.linkedin.com/in/marcos-paulo-ribeiro-de-alcantara-ab0088299" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="mailto:m.alcantara1444@gmail.com">E-mail</a>
+      <a href="https://kanekakunn.artstation.com" target="_blank" rel="noopener" data-i18n="footer.artstation">ArtStation</a>
+      <a href="https://www.linkedin.com/in/marcos-paulo-ribeiro-de-alcantara-ab0088299" target="_blank" rel="noopener" data-i18n="footer.linkedin">LinkedIn</a>
+      <a href="mailto:m.alcantara1444@gmail.com" data-i18n="footer.email">E-mail</a>
     </div>
   </div>
 </footer>
 
+<script src="js/i18n.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

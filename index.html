@@ -15,30 +15,36 @@
       <span class="badge">MA</span>
       Marcos Alcantara
     </a>
-    <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-    </button>
-    <nav class="main-nav">
-      <a href="index.html" class="active">Home</a>
-      <a href="projetos.html">Projetos</a>
-      <a href="sobre.html">Sobre</a>
-      <a href="contato.html">Contato</a>
-    </nav>
+    <div class="nav-area">
+      <nav class="main-nav">
+        <a href="index.html" class="active" data-i18n="nav.home">Home</a>
+        <a href="projetos.html" data-i18n="nav.projects">Projetos</a>
+        <a href="sobre.html" data-i18n="nav.about">Sobre</a>
+        <a href="contato.html" data-i18n="nav.contact">Contato</a>
+      </nav>
+      <div class="lang-switch" role="group" aria-label="Idioma / Language">
+        <button type="button" class="lang-btn" data-lang="pt">PT</button>
+        <button type="button" class="lang-btn" data-lang="en">EN</button>
+      </div>
+      <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
   </div>
 </header>
 
 <main>
   <section class="hero">
     <div class="wrap">
-      <span class="kicker"><span class="dot"></span> Disponível para estágio em arte de jogos</span>
-      <h1>Modelo personagens, construo cenas e prototipo mecânicas jogáveis.</h1>
-      <p class="lead">Sou estudante de Game Design com foco em arte 3D — da escultura de personagens ao level design em engine. Uso Blender, Substance Painter e Unity para transformar ideias em algo que o jogador possa explorar.</p>
+      <span class="kicker"><span class="dot"></span> <span data-i18n="home.kicker">Disponível para estágio em arte de jogos</span></span>
+      <h1 data-i18n="home.h1">Modelo personagens, construo cenas e prototipo mecânicas jogáveis.</h1>
+      <p class="lead" data-i18n="home.lead">Sou estudante de Game Design com foco em arte 3D — da escultura de personagens ao level design em engine. Uso Blender, Substance Painter e Unity para transformar ideias em algo que o jogador possa explorar.</p>
       <div class="hero-actions">
         <a href="projetos.html" class="btn btn-primary">
-          Ver projetos
+          <span data-i18n="home.cta.projects">Ver projetos</span>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
-        <a href="contato.html" class="btn btn-secondary">Entrar em contato</a>
+        <a href="contato.html" class="btn btn-secondary" data-i18n="home.cta.contact">Entrar em contato</a>
       </div>
     </div>
   </section>
@@ -54,8 +60,8 @@
             <path d="M3 7 L12 12 L21 7"/>
           </svg>
         </div>
-        <h3>Modelagem 3D</h3>
-        <p>Personagens e props com workflow poly-a-poly em Blender, texturizados no Substance 3D Painter.</p>
+        <h3 data-i18n="home.h1card.title">Modelagem 3D</h3>
+        <p data-i18n="home.h1card.desc">Personagens e props com workflow poly-a-poly em Blender, texturizados no Substance 3D Painter.</p>
       </div>
 
       <div class="highlight-card">
@@ -67,8 +73,8 @@
             <rect x="14" y="14" width="7" height="7" rx="1"/>
           </svg>
         </div>
-        <h3>Level design</h3>
-        <p>Prototipagem de espaços jogáveis em Unity e Unreal, pensando em ritmo, leitura e combate.</p>
+        <h3 data-i18n="home.h2card.title">Level design</h3>
+        <p data-i18n="home.h2card.desc">Prototipagem de espaços jogáveis em Unity e Unreal, pensando em ritmo, leitura e combate.</p>
       </div>
 
       <div class="highlight-card">
@@ -78,8 +84,8 @@
             <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/>
           </svg>
         </div>
-        <h3>Narrativa e mundo</h3>
-        <p>Criação de narrativas e contexto para os jogos, dando motivo para cada mecânica e cada sala.</p>
+        <h3 data-i18n="home.h3card.title">Narrativa e mundo</h3>
+        <p data-i18n="home.h3card.desc">Criação de narrativas e contexto para os jogos, dando motivo para cada mecânica e cada sala.</p>
       </div>
 
     </div>
@@ -88,15 +94,16 @@
 
 <footer class="site-footer">
   <div class="wrap">
-    <p>&copy; 2026 Marcos Alcantara.</p>
+    <p data-i18n="footer.rights">&copy; 2026 Marcos Alcantara.</p>
     <div class="footer-socials">
-      <a href="https://kanekakunn.artstation.com" target="_blank" rel="noopener">ArtStation</a>
-      <a href="https://www.linkedin.com/in/marcos-paulo-ribeiro-de-alcantara-ab0088299" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="mailto:m.alcantara1444@gmail.com">E-mail</a>
+      <a href="https://kanekakunn.artstation.com" target="_blank" rel="noopener" data-i18n="footer.artstation">ArtStation</a>
+      <a href="https://www.linkedin.com/in/marcos-paulo-ribeiro-de-alcantara-ab0088299" target="_blank" rel="noopener" data-i18n="footer.linkedin">LinkedIn</a>
+      <a href="mailto:m.alcantara1444@gmail.com" data-i18n="footer.email">E-mail</a>
     </div>
   </div>
 </footer>
 
+<script src="js/i18n.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
